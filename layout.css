@@ -375,7 +375,7 @@ overflow:auto;
 .bodycombat{
 	width:0;
 	height:250px;
-	background-image:linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url("bodycombat.jpg");
+	background-image:linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url("Bodycombat.jpg");
 	position:absolute;
 	top:0;
 	display:flex;
@@ -411,6 +411,19 @@ overflow:auto;
 		transition: .5s ease all;
 		z-index:5;
 }
+.cyborg{
+	width:0;
+	height:250px;
+	background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("");
+	position:absolute;
+	top:0;
+	display:flex;
+	justify-content: center;
+	aligin-items:center;
+	overflow:hidden;
+		transition: .5s ease all;
+		z-index:5;
+}
 #listitem:hover .puuvari{
 	color:white;
 	width:100%;
@@ -433,6 +446,13 @@ overflow:auto;
     animation-delay: 2s;
 	}
 #listitem:hover .mallinnus{
+	color:white;
+	width:100%;
+	overflow: hidden;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+	}
+#listitem:hover .cyborg{
 	color:white;
 	width:100%;
 	overflow: hidden;
