@@ -12,6 +12,27 @@ body {
   color: white;
   z-index:-1;
 }
+.btn {
+	display: inline-block;
+	width:200px;
+	font-weight: bold;
+	padding:10px;
+	color:#fff;
+	border: 4px solid #fff;
+	text-align:center;
+	outline: none;
+	text-decoration: none;
+	transition: background-color 0.3s ease-in, color 0.3s ease-in;
+	padding-left:5px;
+}
+.btn:hover{
+	background-color: #fff;
+	color: #000;
+}
+/*
+#NavFa {
+color:black;
+}*/
 .Gallery {
 	padding:10px;
 	overflow:hidden;
@@ -41,38 +62,47 @@ body {
 	overflow:auto;
 }
 header {
-    background-attachment: fixed;
+  background-attachment: fixed;
 	background-image: url("Bicycle.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size:100%;
+	background-size:cover;
 	text-align:bottom;
 	font-size:2em;
-	padding-bottom:49%;
+	padding-bottom:55%;
 	background-position-y:50px;
-	z-index:-10;
+	position:relative;
 }
 .Content
 {
-	position:absolute;
-	top:40%;
-	left:15%;
-	transform: transition(-50%,-50%);
-	text-align:center;
-	text-transform:uppercase;
+position:absolute;
+width:80%;
+color:white;
+height:auto;
+margin-top:20%;
+margin-left:12%;
 }
-.Content h1 {
-	font: Helvetica bold sans-serif;
-	font-size: 2.0em;
-	letter-spacing:0;
+.Content h1{
+color:white;
+font-size:2em;
+padding-bottom:0;
+margin-bottom: 0;
+}
+header p {
+font-style: italic;
+padding-left:5px;
+margin-top:0;
+font-size:1.2em;
+color:white;
+margin-bottom:8px;
 }
 header h1{
+	fontsize:3em;
 	color:white;
-	text-shadow: 1px 1px 2px #333;
 
 }
 #info{
-background-color:#3b7d9b;
+background-color:#2980b9;
 color:white;
 margin:0;
 padding:4%;
@@ -100,7 +130,7 @@ padding-top:100px;
 	font-family:Helvetica;
 }
 #miro4{
-	    background-attachment: fixed;
+background-attachment: fixed;
 background-image:url("Tree.jpg");
 background-repeat: no-repeat;
 background-position: center;
@@ -131,15 +161,15 @@ padding:10%;
 background-image:url("Bodycombat_largeb.jpg");
 background-repeat: no-repeat;
 background-position: center;
-background-size:100%;
+background-size:cover;
 padding:10%;
 }
 #miro_3{
-    background-attachment: fixed;
+background-attachment: fixed;
 background-image:url("Chicago.jpg");
 background-repeat: no-repeat;
 background-position: center;
-background-size:100%;
+background-size:cover;
 padding:10%;
 }
 h1,h2 {
@@ -170,7 +200,6 @@ aside {
 	border-radius: 10px;
 	text-align:left;
 }
-
 /*#Music section#combat{
 	width: 95%;
 	height: 500px;
@@ -191,15 +220,14 @@ aside img{
 nav {
 	position: fixed;
 	top: 0;
-	left: 0;
+	/*left: 0;*/
 	width: 100%;
 	color:#666;
 	background-color:white;
 	text-align:none;
 	z-index:50;
+	line-height:50px;
 }
-nav ul {
-	}
 nav ul.left {
 	float:left;
 	margin-left:-30px;
@@ -218,9 +246,37 @@ nav a{
 	font: 150% impact, arial, sans-serif;
 	text-decoration: none;
 	padding-left:5%;
+	transition:0.4s;
 	}
+.show-menu-btn,.hide-menu-btn{
+	transition:0.4s;
+	color:#666;
+	font-size:30px;
+	cursor:pointer;
+	display: none;
+}
+.show-menu-btn{
+	float:right;
+	line-height: 50px;
+	padding-top: 19px;
+	padding-right: 30px;
+}
+.show-menu-btn i{
+	line height:50px;
+	font-size:1.25em;
+}
+nav a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover{
+	color:#3498db;
+}
+#chk{
+	position:absolute;
+	visibility:hidden;
+	z-index: -1111;
+}
 footer{
-	background-color:#CE5F3A;
+	background-color:#e67e22;
 	font-family:impact;
 	padding: 2px 0;
 	height:400px;
@@ -248,37 +304,42 @@ footer aside{
 	display:inline;
 }
 footer aside a{
-font-size:1em;
+		position: relative;
+		color: #ecf0f1;
+		font-size:1em;
     line-height: 1em;
-    transition: 1s all;
+    transition: 1s;
     display: inline-block;
-    width: 15%;
+    margin-left: 12%;
+		margin-right: 12%;
+}
+footer aside a i{
+		color: #ecf0f1;
 }
 footer aside a:hover{
-    transform:scale(2);
-    -webkit-transform:scale(2);
-    -moz-transform:scale(2);
-text-shadow: 4px 4px 30px rgba(0,0,0,0.8);
+		color:white;
+		text-shadow: 4px 4px 30px rgba(0,0,0,0.8);
 }
 footer aside h1{
 	color:white;
 }
-i {
+footer i {
 	color:white;
 	font-size:4em !important;
 	width:19%;
 }
 #text{
-	
+
 }
 #about_me{
 background-color:White;
 text-align:center;
 padding:50px;
 z-index:3;
+color:#34495e
 }
-iframe{
-width:45%;
+#about_me h1,h2,h3 {
+	color:#34495e;
 }
 #Music{
 	overflow:auto;
@@ -288,7 +349,6 @@ width:45%;
 	border-radius:20px;
 	border: 20px rgba(43,42,43,0.3);
 	font-size:1.3em;
-
 }
 #video_box{
 	height:750px;
@@ -461,7 +521,7 @@ overflow:auto;
 	}
 /*#listitemMO{
 	background: 	linear-gradient(
-      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.7)
     ),url("driverlog.png");
 	width:100%;
@@ -498,7 +558,7 @@ overflow:auto;
 	z-index:10;
 	position:absolute;
 	top: 40%;
-	
+
 	-webkit-margin-before: 1em;
     -webkit-margin-after: 1em;
     -webkit-margin-start: 0px;
@@ -528,7 +588,7 @@ a{
     padding: 4%;
     text-shadow: 1px 1px 2px #333;
     font-size: 1.5em;
-	padding-top:7%;
+		padding-top:7%;
 }
 #info_music h1{
 	color:white;
@@ -571,13 +631,56 @@ input[type=submit] {
 	#wrap {
 		width: 95%;
 	}
+	header {
+		padding-bottom:85%;
+
+	}
+	.show-menu-btn, .hide-menu-btn{
+		display: block;
+	}
+	.right {
+		position:fixed;
+		width:100%;
+		height:100vh;
+		background: #333;
+		right:100%;
+		top: 0;
+		text-align: center;
+		padding: 80px 0 ;
+		line-height: normal;
+	}
+	.right a{
+		display:block;
+		padding:20px;
+	}
+	.hide-menu-btn{
+		position:absolute;
+		top: 40px;
+		right: 40px;
+	}
+	#chk:checked ~ .right{
+		right: 0;
+	}
+	/*
 	nav{
 	text-align:none;
 	}
 	nav a {
 		font-size: 110%;
 		padding-right:0;
+	}*/
+
+	.Content
+	{
+	width:100%;
+	color:white;
+	height:auto;
+	margin-top:17%;
+	margin-left:0;
+	text-align: center;
+	font-size: 0.9em;
 	}
+
 	section{
 	width: 94%;
 	}
@@ -596,6 +699,10 @@ input[type=submit] {
 	}
 	footer aside h1{
 	color:white;
+	}
+	footer aside a{
+	    margin-left: 10%;
+			margin-right: 10%;
 	}
 		#Music aside {
 	float: left;
@@ -628,6 +735,9 @@ input[type=submit] {
 	#wrap {
 		width: 99%;
 	}
+	body{
+		margin:0;
+	}
 	h1{
 	font-size:150%;
 	}
@@ -644,13 +754,49 @@ input[type=submit] {
 	text-align:none;
 	}
 	header{
+	/* Commet -Check the headers postion value. Its off the screen because its seems to be too low*/
 	padding-top:80%;
+	background-position:80% 0 0 0;
+	}
+	.Content
+	{
+	width:100%;
+	color:white;
+	height:auto;
+	margin-top:0;
+	margin-left:0;
+	}
+	.Content h1 {
+	color:white;
 	}
 	nav ul.left {
 	float:none;
 	margin-left:0;
 	text-align:center;
 	margin-bottom:0;
+}
+#listitem {
+	height:150px;
+	background-size: cover;
+}
+#listitem h1{
+	font-size:1.25em;
+}
+#listitem i{
+	visibility: hidden;
+}
+#listitem p {
+	visibility: hidden;
+	margin:0;
+	padding:0;
+	position:absolute;
+	z-index:-100;
+}
+
+#info_music {
+	padding-top:0;
+	padding-top:120px;
+	height:100px;
 }
 	nav ul.right {
 	margin-top:0;
@@ -665,12 +811,12 @@ input[type=submit] {
 		display: block;
 		padding-bottom: 4%;
 	}
-	
+
 	nav a {
 		font-size: 140%;
 		padding-right:0;
 	}
-	
+
 	section {
 		float: none;
 		width: 94%;
@@ -679,18 +825,19 @@ input[type=submit] {
 		float: none;
 		width: 94%;
 	}
-	
+
 	section img {
 		display: none;
 	}
 	footer {
+	text-align:center;
 	background-color:#CE5F3A;
 	}
 	footer li {
 		display: block;
 		padding-bottom: 4%;
 	}
-	
+
 	footer a {
 		font-size: 80%;
 	}
@@ -702,8 +849,10 @@ input[type=submit] {
     line-height: 1em;
     transition: 1s all;
     display: inline-block;
-    width: 45%;
-	margin:2%;
+    width: 90%;
+		margin-left: 0;
+		margin-right: 0;
+		padding-top:30px;
 	}
 	footer ul{
 	padding:0;
@@ -732,14 +881,8 @@ input[type=submit] {
 	width:100%;
 	height:auto;
 	}
-	#info_music{
-	padding-top:55%;
-	}
-	#miro_3{
-	background-size:200%;
-	}
 	#miro_2{
-	background-size:200%;
+	background-size:cover;
 	}
 	#Music img{
 	width:100%;
@@ -749,5 +892,8 @@ input[type=submit] {
 	}
 	video_box{
 		height:160px;
+	}
+	header h1 {
+	font-size:1em !important;
 	}
 }

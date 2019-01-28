@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
@@ -16,18 +17,27 @@
 </head>
 
 <body>
-<nav>
-<div id="wrap">
-<ul class="left">
-<li><a href="index.html">Miro </a></li>
-</ul>
-<ul class="right">
-<li><a href="work.html">Work </a></li>
-<li><a href="Hobies.html">Hobies</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
-</nav>	
+	<nav>
+
+	<div id="wrap">
+	  <input type="checkbox" id="chk">
+	  <label for="chk" class="show-menu-btn">
+	    <i class="fas fa-ellipsis-h"></i>
+	  </label>
+	<ul class="left">
+
+	<li><a href="index.html">Miro </a></li>
+	</ul>
+	<ul class="right">
+	<li><a href="work.html">Work </a></li>
+	<li><a href="Hobies.html">Hobbies</a></li>
+	<li><a href="contact.html">Contact</a></li>
+
+	<label for="chk" class="hide-menu-btn">
+	<i class="fas fa-times" id="NavFa"></i>
+	</label>
+	</ul>
+	</nav>
 <div id="info_music">
 <center><h1>Music</h1></center>
 </div>
@@ -46,7 +56,7 @@
 <div id="miro_2_black">
 <div Id="video_box" onclick="black()">
 			</aside>
-			<iframe src="https://drive.google.com/file/d/1D6I1-9QGo-jvl9NUJaEZWhpmedQR_35j/preview" width="640" height="480"></iframe>
+			<iframe src="https://drive.google.com/file/d/1D6I1-9QGo-jvl9NUJaEZWhpmedQR_35j/preview" width="640" id:"frame"></iframe>
 			</div>
 			</div>
 <footer>
@@ -55,19 +65,15 @@
 </center>
 
 <aside>
-<a href="#"><i class="fa fa-facebook"></i></a>
-<a href="#"><i class="fa fa-twitter"></i></a>
-<a href="mailto:m_paananen@fanshaweonline.ca"><i class="fa fa-envelope"></i></a>
+<a href="mailto:miro.mikael.paananen@gmail.com"><i class="fa fa-envelope"></i></a>
 <a href="#"><i class="fa fa-phone"></i></a>
-<a href="https://fi.linkedin.com/in/miro-paananen-b94827103"><i class="fa fa-linkedin"></i></a>
+<a href="https://www.linkedin.com/in/miro-paananen-b94827103"><i class="fab fa-linkedin"></i></i></a>
 </i>
-</aside>
-<aside>
 </aside>
 </footer>
 <script>
 	var div = document.getElementById("miro_2");
-	
+
 	function black() {
 		div.setAttribute("id", "miro_2_black");
 		}
